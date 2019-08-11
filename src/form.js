@@ -12,10 +12,10 @@ class Form extends Component {
 	}
 	
 	handleChange = (event) => {
-		const { item, value } = event.target;
+		const { name, value } = event.target;
 		
 		this.setState({
-			[item]: value,
+			[name]: value,
 		})
  	}
 	
