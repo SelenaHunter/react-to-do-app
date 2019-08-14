@@ -16,7 +16,7 @@ const TableBody = (props) => {
 		return (
 			<tr key={index}>
 				<td>
-					<ol><li>{row.item}</li></ol>
+					{index + 1 + ". "}{row.item}
 				</td>
 				<td>
 					<button className="button" onClick={() => props.removeItem(index)}>

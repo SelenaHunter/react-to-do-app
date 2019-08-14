@@ -2,7 +2,7 @@
 ======================
 COLORS: https://coolors.co/565264-706677-a6808c-ccb7ae-d6cfcb
 
-White: #d6cfcb
+White: #eee7e7
 Red: #a6808c
 Grey: #706677
 Dark grey: #565264
@@ -19,7 +19,7 @@ Dark grey: #565264
 .container {
 	font-family: sans-serif;
 	color: #565264;
-	background: #d6cfcb;
+	background-color: #eee7e7;
 	border: 2px solid #a6808c;
 	max-width: 500px;
 	box-sizing: border-box;
@@ -43,10 +43,14 @@ td {
 table {
 }
 
-li {
-	width: 20px;
-}
 
 .button {
 	padding: 2px 5px;
+	background-color: #706677;
+	color: #eee7e7;
+	border: none;
+}
+
+.button:hover {
+	background-color: #a6808c;
 }
