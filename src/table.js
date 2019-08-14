@@ -5,6 +5,7 @@ const TableHeader = () => {
 		<thead>
 			<tr>
 				<th>Task</th>
+				<th>Delete</th>
 			</tr>
 		</thead>
 	)
@@ -14,10 +15,13 @@ const TableBody = (props) => {
 	const rows = props.itemData.map((row, index) => {
 		return (
 			<tr key={index}>
-				<td>{row.item}</td>
 				<td>
-					<button onClick={() =>
-					props.removeItem(index)}>Delete</button>
+					<ol><li>{row.item}</li></ol>
+				</td>
+				<td>
+					<button className="button" onClick={() => props.removeItem(index)}>
+						Delete
+					</button>
 				</td>
 			</tr>
 		)
@@ -31,7 +35,7 @@ class Table extends Component {
 		return (
 			<table>
 				<TableHeader />
-				<TableBody itemData={itemData} 
+				<TableBody itemData={itemData}
 					removeItem={removeItem}/>
 			</table>
 		);
