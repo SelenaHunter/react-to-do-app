@@ -13,21 +13,14 @@ class Form extends Component {
 	
 	handleChange = (event) => {
 		const { name, value } = event.target;
-		this.setState({
+			this.setState({
 			[name]: value,
 		})
  	}
 	
 	submitTask = () => {
-		this.props.handleSubmit(this.state);
+		this.props.handleSubmitTask(this.state);
 		this.setState(this.initialState);
-	}
-	
-	keyPressed = (event) => {
-	  event.preventDefault();
-	  if (event.key === "Enter") {
-		this.submitTask();
-	  }
 	}
 	
 	render() {
@@ -39,11 +32,14 @@ class Form extends Component {
 					type="text" 
 					name="item" 
 					value={item}
-					onKeyPress={this.keyPressed}
-					onChange={this.handleChange} />
+					autoFocus
+					onChange={this.handleChange}
+					onKeyPress={(event) => { event.key === 'Enter' && event.preventDefault();}}
+					/>
 				<button 
 					type="button" 
-					onClick={this.submitTask}>Add Task</button>
+					onClick={this.submitTask}
+					>Add Task</button>
 			</form>
 		);
 	}

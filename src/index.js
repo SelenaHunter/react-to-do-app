@@ -26,9 +26,10 @@ class App extends Component {
 		})
 	}
 	
-	handleSubmit = (item) => {
+	handleSubmitTask = (item) => {
 		this.setState({ items: [...this.state.items, item] })
 	}
+
 	
 	render() {
 		const { items } = this.state;
@@ -36,7 +37,7 @@ class App extends Component {
 		return (
 			<div className="container">
 				<Table itemData={items} removeItem={this.removeItem} />
-				<Form handleSubmit={this.handleSubmit} />
+				<Form handleSubmitTask={this.handleSubmitTask} />
 			</div>
 		)
 	}
