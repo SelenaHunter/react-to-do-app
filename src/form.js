@@ -19,6 +19,7 @@ class Form extends Component {
  	}
 	
 	submitTask = () => {
+		//if task is not empty (null)
 		if (this.state.item) {
 			this.props.handleSubmitTask(this.state);
 			this.setState(this.initialState);

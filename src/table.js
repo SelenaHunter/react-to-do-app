@@ -18,10 +18,13 @@ const TableBody = (props) => {
 				<td>
 					{index + 1 + ". "}{row.item}
 				</td>
-				<td>
+				<td className="deleteColumn">
 					<button 
-						type="button" 
-						onClick={() => props.removeItem(index)}
+						type="button"
+						onClick={() => {
+							props.removeItem(index)
+							}
+						}	
 						>Delete</button>
 				</td>
 			</tr>
@@ -36,8 +39,10 @@ class Table extends Component {
 		return (
 			<table>
 				<TableHeader />
-				<TableBody itemData={itemData}
-					removeItem={removeItem}/>
+				<TableBody 
+					itemData={itemData}
+					removeItem={removeItem}
+				/>
 			</table>
 		);
 	}

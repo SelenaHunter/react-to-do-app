@@ -32,21 +32,23 @@ table, th, td {
 tr, th {
 	width: 200px;
 	color: #565264;
+	padding: 5px;
 }
 
 td {
 	color: #706677;
+	padding: 5px;
 }
-
-table {
-}
-
 
 button {
 	padding: 2px 5px;
 	background-color: #706677;
 	color: #eee7e7;
 	border: none;
+}
+
+.deleteColumn {
+	text-align: center;
 }
 
 button:hover {

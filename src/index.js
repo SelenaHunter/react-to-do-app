@@ -4,8 +4,9 @@ TO DO:
 + DONE Autofocus input field after adding a task
 + DONE Don't allow empty tasks
 
-+ Switch order of tasks
++ Switch order of tasks w/ up/down buttons
 + CSS formatting
++ Save to local storage button?
 */
 
 import React, { Component } from 'react';
@@ -21,7 +22,6 @@ class App extends Component {
 
 	removeItem = (index) => {
 		const { items } = this.state;
-		
 		this.setState({
 			items: items.filter((item, i) => {
 				return i !== index;
