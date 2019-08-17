@@ -19,8 +19,10 @@ class Form extends Component {
  	}
 	
 	submitTask = () => {
-		this.props.handleSubmitTask(this.state);
-		this.setState(this.initialState);
+		if (this.state.item) {
+			this.props.handleSubmitTask(this.state);
+			this.setState(this.initialState);
+		}
 	}
 	
 	render() {

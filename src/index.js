@@ -1,9 +1,11 @@
 /*
 TO DO:
-+ Add task button works with enter key
++ DONE Add task button works with enter key
++ DONE Autofocus input field after adding a task
++ DONE Don't allow empty tasks
+
 + Switch order of tasks
 + CSS formatting
-+ Autofocus input field after adding a task
 */
 
 import React, { Component } from 'react';
