@@ -34,7 +34,14 @@ class Form extends Component {
 					value={item}
 					autoFocus
 					onChange={this.handleChange}
-					onKeyPress={(event) => { event.key === 'Enter' && event.preventDefault();}}
+					//If you hit enter, submit the task, don't refresh the form
+					onKeyPress={(event) => { 
+							if (event.key === 'Enter') {
+								event.preventDefault();
+								this.submitTask();
+							}
+						}
+					}
 					/>
 				<button 
 					type="button" 

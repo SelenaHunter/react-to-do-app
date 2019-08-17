@@ -3,6 +3,7 @@ TO DO:
 + Add task button works with enter key
 + Switch order of tasks
 + CSS formatting
++ Autofocus input field after adding a task
 */
 
 import React, { Component } from 'react';
