@@ -6,8 +6,6 @@ White: #eee7e7
 Red: #a6808c
 Grey: #706677
 Dark grey: #565264
-
-
 ======================
 */
 
@@ -44,13 +42,13 @@ table {
 }
 
 
-.button {
+button {
 	padding: 2px 5px;
 	background-color: #706677;
 	color: #eee7e7;
 	border: none;
 }
 
-.button:hover {
+button:hover {
 	background-color: #a6808c;
 }

@@ -1,3 +1,10 @@
+/*
+TO DO:
++ Add task button works with enter key
++ Switch order of tasks
++ CSS formatting
+*/
+
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -19,7 +26,7 @@ class App extends Component {
 		})
 	}
 	
-	handleSubmit = item => {
+	handleSubmit = (item) => {
 		this.setState({ items: [...this.state.items, item] })
 	}
 	
