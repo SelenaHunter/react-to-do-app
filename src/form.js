@@ -4,9 +4,9 @@ class Form extends Component {
 	
 	constructor(props) {
 		super(props)
-		
 		this.initialState = {
 			item: '',
+			announcementMessage:'',
 		}
 		this.state = this.initialState;
 	}
@@ -22,7 +22,9 @@ class Form extends Component {
 		//if task is not empty (null)
 		if (this.state.item) {
 			this.props.handleSubmitTask(this.state);
-			this.setState(this.initialState);
+			this.setState(
+				this.initialState
+			)
 		}
 	}
 	
@@ -30,8 +32,9 @@ class Form extends Component {
 		const { item } = this.state;
 		return (
 			<form>
-				<label>Add new task:</label>
+				<label>Add task:</label>
 				<input 
+					aria-label="add task"
 					type="text" 
 					name="item" 
 					value={item}

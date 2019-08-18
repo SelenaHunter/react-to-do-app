@@ -12,45 +12,84 @@ Dark grey: #565264
 * {
 	padding: 0;
 	margin: 0;
+	--button: #735e73;
+	--background: #eee7e7;
+	--text: #4b4758;
+	--highlight: #a6808c;
 }
 
 .container {
 	font-family: sans-serif;
-	color: #565264;
-	background-color: #eee7e7;
-	border: 2px solid #a6808c;
-	max-width: 500px;
+	color: var(--text);
+	background-color: var(--background);
+	border: 2px solid var(--highlight);
 	box-sizing: border-box;
+	width: 50%;
+	margin: 20px auto;
 }
 
 table, th, td {
-	border: 2px solid #a6808c;
+	border: 2px solid var(--highlight);
 	border-collapse: collapse;
 	box-sizing: border-box;
+	width: 100%;
 }
 
-tr, th {
-	width: 200px;
-	color: #565264;
+tr, th, td {
+	color: var(--text);
 	padding: 5px;
 }
 
 td {
-	color: #706677;
+	color: var(--button);
+}
+
+h1 {
+	font-size: 24px;
 	padding: 5px;
 }
 
 button {
 	padding: 2px 5px;
-	background-color: #706677;
-	color: #eee7e7;
+	background-color: var(--button);
+	color: var(--background);
 	border: none;
+}
+
+.taskColumn {
+	width: 75%;
+	padding-left: 15px;
 }
 
 .deleteColumn {
 	text-align: center;
+	width: 25%;
 }
 
 button:hover {
-	background-color: #a6808c;
+	background-color: var(--highlight);
+}
+
+form {
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+	border: inherit;
+}
+
+input {
+	margin: 5px;
+}
+
+.visuallyHidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }

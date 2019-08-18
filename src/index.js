@@ -3,9 +3,9 @@ TO DO:
 + DONE Add task button works with enter key
 + DONE Autofocus input field after adding a task
 + DONE Don't allow empty tasks
++ DONE CSS formatting
 
 + Switch order of tasks w/ up/down buttons
-+ CSS formatting
 + Save to local storage button?
 */
 
@@ -14,10 +14,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Table from './table';
 import Form from './form';
+import Announcements from './announcements';
 
 class App extends Component {
 	state = {
-		items: []
+		items: [],
+		announcementMessage: '',
+	}
+
+	componentDidMount() {  
+		document.title = "To-Do App"
 	}
 
 	removeItem = (index) => {
@@ -26,11 +32,15 @@ class App extends Component {
 			items: items.filter((item, i) => {
 				return i !== index;
 			}),
+			announcementMessage:`${this.state.items[index].item} deleted`,
 		})
 	}
 	
 	handleSubmitTask = (item) => {
-		this.setState({ items: [...this.state.items, item] })
+		this.setState({ 
+			items: [...this.state.items, item],
+			announcementMessage:`${item.item} added`,
+		})
 	}
 
 	
@@ -41,6 +51,8 @@ class App extends Component {
 			<div className="container">
 				<Table itemData={items} removeItem={this.removeItem} />
 				<Form handleSubmitTask={this.handleSubmitTask} />
+				<Announcements message={this.state.announcementMessage}/>
+
 			</div>
 		)
 	}

@@ -4,8 +4,11 @@ const TableHeader = () => {
 	return (
 		<thead>
 			<tr>
-				<th>Task</th>
-				<th>Delete</th>
+				<th colSpan="2"><h1>To-Do App</h1></th>
+			</tr>
+			<tr>
+				<th className="taskColumn">Task</th>
+				<th className="deleteColumn">Delete</th>
 			</tr>
 		</thead>
 	)
@@ -15,17 +18,18 @@ const TableBody = (props) => {
 	const rows = props.itemData.map((row, index) => {
 		return (
 			<tr key={index}>
-				<td>
+				<td className="taskColumn">
 					{index + 1 + ". "}{row.item}
 				</td>
 				<td className="deleteColumn">
 					<button 
+						aria-label="Delete"
 						type="button"
 						onClick={() => {
 							props.removeItem(index)
 							}
 						}	
-						>Delete</button>
+						>✖</button>
 				</td>
 			</tr>
 		)
