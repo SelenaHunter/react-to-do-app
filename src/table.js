@@ -23,7 +23,7 @@ const TableBody = (props) => {
 				</td>
 				<td className="deleteColumn">
 					<button 
-						aria-label="Delete"
+						aria-label={`Delete ${row.item}`}
 						type="button"
 						onClick={() => {
 							props.removeItem(index)
