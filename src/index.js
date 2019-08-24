@@ -1,14 +1,3 @@
-/*
-TO DO:
-+ DONE Add task button works with enter key
-+ DONE Autofocus input field after adding a task
-+ DONE Don't allow empty tasks
-+ DONE CSS formatting
-
-+ Switch order of tasks w/ up/down buttons
-+ Save to local storage button?
-*/
-
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -57,6 +46,5 @@ class App extends Component {
 		)
 	}
 }
-
 
 ReactDOM.render(<App />, document.getElementById('root'));
