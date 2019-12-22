@@ -1,4 +1,4 @@
-A simple to-do app created with React. It's accessible to screenreaders (screenreader users are updated as each task is added or deleted). Access it here: [React to-do app](https://github.com/SelenaHunter/react-to-do-app/settings).
+A simple to-do app created with React. It's accessible to screenreaders (screenreader users are updated as each task is added or deleted). Access it here: [React to-do app](https://selenahunter.github.io/react-to-do-app/).
 
 ### Why a To-do App?
 Accessibility is important, and single-page apps have unique accessibility challenges, i.e. DOM changes aren't always properly announced to screenreader users. I wanted a proof-of-concept, simple app that would properly update screenreader users, and a to-do app fit the bill.
